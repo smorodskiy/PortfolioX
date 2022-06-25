@@ -26,6 +26,11 @@
   --bs-gutter-x: 1.25rem;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 ol,
 ul {
   list-style: none;
@@ -175,7 +180,7 @@ body {
   font-weight: 500;
   /* font-size: 125%; */
   line-height: var(--lineheight);
-  
+
   color: var(--text);
   background-color: #eef3f9;
   min-width: 320px;
@@ -239,6 +244,7 @@ nav {
 
 .hero {
   height: calc(100vh - 105px);
+  /* max-width: 1140px; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,6 +343,7 @@ header .heroDescription .socialsResume .resumeLink {
 }
 
 header .heroDescription .socialsResume .resumeLink:hover {
+  color: white;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
 }
@@ -349,37 +356,128 @@ header .heroDescription .socialsResume .resumeLink:focus {
 }
 
 .socialsList {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 50px;
-  }
-  
-  .socialsList li {
-    margin: 0 10px;
-  }
-  
-  .socialsList li a {
-    padding: 9px 10px;
-    background-color: white;
-    border-radius: 6px;
-    color: #8444df;
-    border: 1px solid #eee;
-    -webkit-box-shadow: 0px 4px 6px rgba(134, 151, 168, 0.1);
-            box-shadow: 0px 4px 6px rgba(134, 151, 168, 0.1);
-    -webkit-transition: all 0.3s ease-in;
-    transition: all 0.3s ease-in;
-    display: inline-block;
-  }
-  
-  .socialsList li a:hover {
-    -webkit-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .socialsList li a:focus {
-    border-color: #80bdff;
-    outline: 0;
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 50px;
+  margin-bottom: 0;
+}
+
+.socialsList li {
+  margin: 0 10px;
+}
+
+.socialsList li a {
+  padding: 9px 10px;
+  background-color: white;
+  border-radius: 6px;
+  color: #0069da;
+  border: 1px solid #eee;
+  -webkit-box-shadow: 0px 4px 6px rgba(134, 151, 168, 0.1);
+  box-shadow: 0px 4px 6px rgba(134, 151, 168, 0.1);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  display: inline-block;
+}
+
+.socialsList li a:hover {
+  -webkit-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+}
+
+.socialsList li a:focus {
+  border-color: #80bdff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+section {
+  padding: 80px 0;
+}
+
+.sectionHead {
+  margin-bottom: 50px;
+}
+
+.sectionContainer {
+  background-color: white;
+  border-radius: 50px;
+  padding: 48px;
+}
+
+.sectionHead {
+  margin-bottom: 50px;
+}
+
+.sectionHead span {
+  padding-bottom: 20px;
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 80px;
+  letter-spacing: 1px;
+}
+
+.sectionHead span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 50px;
+  height: 1px;
+  background: #333;
+}
+
+.sectionHead h2 {
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+}
+
+.aboutContainer p {
+    line-height: 1.5;
+}
+
+.skillsContainer {
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.skillsGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(80px, 1fr)) [auto-fill];
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-column-gap: 105px;
+  grid-row-gap: 50px;
+}
+
+.skillsGrid li {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  width: 80px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
+  box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
+  border: 1px solid #eee;
+}
+
+.skillsGrid li img {
+  width: 35px;
+  height: 35px;
+}
+
+.skillsGrid li p {
+    margin-top: 10px;
+	margin-bottom: 0;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
