@@ -1,6 +1,6 @@
 const index = {};
 
-index.$menu = $('#sideMenu');
+index.$menu = $('nav');
 index.$navItem = $('.navItem');
 index.$navItemName = $('.navItemName')
 index.$home = $('#home');
@@ -13,9 +13,9 @@ index.$scrollDown = $('#scrollDown');
 index.isOpen = false;
 
 // Scroll function
-index.scroll = function(target) {
-  $('html,body').animate({ scrollTop: $(target).offset().top }, 500);
-}
+// index.scroll = function(target) {
+//   $('html,body').animate({ scrollTop: $(target).offset().top }, 500);
+// }
 
 // Menu button function
 index.showHideMenu = function() {
@@ -31,17 +31,17 @@ if ($(window).width() <= 990) {
 
 index.eventListeners = function() {
   // when windox resizes between large and small displayes
-  $(window).on('resize', function() {
-    if ($(window).width() > 990) {
-      index.$menu.removeClass('sideMenuHide').addClass('sideMenuShow')
-      index.$scrollDown.show();
-      index.isOpen= false;
-    } else {
-      index.$menu.removeClass('sideMenuShow').addClass('sideMenuHide');
-      index.isOpen = false;
-      index.$scrollDown.hide();
-    }
-  });
+//   $(window).on('resize', function() {
+//     if ($(window).width() > 990) {
+//       index.$menu.removeClass('sideMenuHide').addClass('sideMenuShow')
+//       index.$scrollDown.show();
+//       index.isOpen= false;
+//     } else {
+//       index.$menu.removeClass('sideMenuShow').addClass('sideMenuHide');
+//       index.isOpen = false;
+//       index.$scrollDown.hide();
+//     }
+//   });
 
   // Nav menu click events for scroll function
   $('a[href*=\\#]').on('click', function () {
@@ -50,8 +50,8 @@ index.eventListeners = function() {
 
   // Menu button click event
   index.$menuButton.on('click', function () {
-    console.log('test');
-    index.showHideMenu;
+    index.$menu.removeClass('sideMenuHide').addClass('sideMenuShow');
+    // index.showHideMenu;
   } );
 
   // Hide menu when clicking a link
