@@ -315,7 +315,7 @@ nav {
   border-radius: 6px;
   width: 100%;
   box-sizing: border-box;
-  text-align: center;
+  /* text-align: center; */
   /* position: relative; */
 }
 
