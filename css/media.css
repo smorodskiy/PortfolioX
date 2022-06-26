@@ -1,63 +1,167 @@
 /* === DESKTOP FIRST === */
 
 /* xl <= Extra extra large (xxl) */
-@media (max-width : 1400px) {
-
+@media (max-width: 1400px) {
 }
 
 /* lg <= Extra large (xl) */
-@media (max-width : 1200px) {
-
+@media (max-width: 1200px) {
+  .contactFormContainer form {
+    -ms-grid-columns: (1fr) [1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contactFormContainer form .subjectInput,
+  .contactFormContainer form .messageInput {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 /2;
+  }
 }
 
 /* md <= Large (lg) */
-@media (max-width : 992px) {
+@media (max-width: 992px) {
+  .navItem {
+    font-size: 0.75rem;
+    padding: 10px;
+    letter-spacing: 1px;
+  }
+  .menuButton {
+    display: block;
+  }
+  .hero {
+    display: block;
+    padding: 80px 0;
+    height: auto;
+  }
+  .navBar li {
+    /* padding: 10px; */
+    width: 101px;
+    margin: 0px 5px 0 5px;
+  }
 
+  .hero .heroDescription {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .hero .heroDescription .socialsResume {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .socialsList {
+    margin-left: 10px;
+  }
 }
 
 /* sm <= Medium (md) */
-@media (max-width : 768px) {
-
+@media (max-width: 768px) {
+  .innerWrapper {
+    padding: 0 15px;
+  }
+  .hero .heroImageContainer img {
+    width: 250px;
+    height: 250px;
+  }
+  .sectionContainer {
+    background-color: transparent;
+    padding: 0;
+  }
+  .aboutContainer {
+    line-height: 1.3;
+    font-size: 1rem;
+  }
+  .workBox {
+    display: block;
+    background-color: #fff;
+    padding: 0;
+  }
+  .workBox .workImageContainer {
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  .workBox .workDescribeContainer {
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  .workBox .workDescribeContainer .workLinks {
+    margin-top: 25px;
+  }
+  .skillsGrid {
+    row-gap: 15px;
+    -webkit-column-gap: 15px;
+    column-gap: 15px;
+  }
+  .contactTypes {
+    display: block;
+  }
+  .contactTypes .flexContainer {
+    max-width: 100%;
+  }
+  .contactTypes .flexContainer:first-child {
+    padding: 0;
+  }
+  .contactTypes .flexContainer:last-child {
+    padding: 0;
+  }
+  .contactTypes .flexContainer .typeBox:first-child {
+    margin-bottom: 15px;
+  }
 }
 
 /* xs <= Small (sm) */
-@media (max-width : 576px) {
-
+@media (max-width: 576px) {
+  .hero {
+    padding: 40px 0;
+  }
+  .hero .heroDescription .socialsResume {
+    display: block;
+  }
+  .hero .heroImageContainer img {
+    /* -webkit-box-shadow: 12px 0 #d9c8f1;
+    box-shadow: 12px 0 #d9c8f1; */
+  }
+  .socialsList {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .contactFormContainer form input,
+  .contactFormContainer form textarea {
+    /* max-width: 380px; */
+  }
 }
-
 
 /* === MOBILE FIRST === */
 
 /* Custom (xs) */
-@media (min-width : 0) {
-
+@media (min-width: 0) {
 }
 
 /* Small (sm) */
-@media (min-width : 576px) {
-
+@media (min-width: 576px) {
 }
 
 /* Medium (md) */
-@media (min-width : 768px) {
-
+@media (min-width: 768px) {
 }
 
 /* Large (lg) */
-@media (min-width : 992px) {
-
+@media (min-width: 992px) {
 }
 
 /* Extra large (xl) */
-@media (min-width : 1200px) {
-	.text {
-		font-size: 18px;
-	}
+@media (min-width: 1200px) {
+  .text {
+    font-size: 18px;
+  }
 }
 
 /* Extra extra large (xxl) */
-@media (min-width : 1400px) {
-	.text {
-		font-size: 22px;
-	}
+@media (min-width: 1400px) {
+  .text {
+    font-size: 22px;
+  }
 }
