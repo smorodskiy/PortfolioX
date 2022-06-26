@@ -19,15 +19,15 @@ index.isOpen = false;
 
 // Menu button function
 index.showHideMenu = function() {
-  index.$menu.toggleClass('sideMenuHide sideMenuShow');
+  index.$menu.toggleClass('sideMenuShow');
   index.isOpen = !index.isOpen;
 }
 
 // Mobile class changes on initial load
-if ($(window).width() <= 990) {
-  index.$menu.addClass('sideMenuHide').removeClass('sideMenuShow');
-  index.$scrollDown.hide();
-}
+// if ($(window).width() <= 990) {
+//   index.$menu.addClass('sideMenuHide').removeClass('sideMenuShow');
+//   index.$scrollDown.hide();
+// }
 
 index.eventListeners = function() {
   // when windox resizes between large and small displayes
@@ -50,7 +50,8 @@ index.eventListeners = function() {
 
   // Menu button click event
   index.$menuButton.on('click', function () {
-    index.$menu.removeClass('sideMenuHide').addClass('sideMenuShow');
+    // index.$menu.removeClass('sideMenuHide').addClass('sideMenuShow');
+    index.showHideMenu();
     // index.showHideMenu;
   } );
 
