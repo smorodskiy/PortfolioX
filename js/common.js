@@ -49,7 +49,10 @@ index.eventListeners = function() {
   });
 
   // Menu button click event
-  index.$menuButton.on('click', index.showHideMenu);
+  index.$menuButton.on('click', function () {
+    console.log('test');
+    index.showHideMenu;
+  } );
 
   // Hide menu when clicking a link
   index.$navItem.on('click', function() {
