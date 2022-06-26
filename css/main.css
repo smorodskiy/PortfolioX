@@ -180,11 +180,15 @@ textarea:required:valid {
 }
 
 .sideMenuHide {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   left: -200px;
 }
 
 .sideMenuShow {
   left: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .menuButton {
@@ -310,8 +314,8 @@ nav {
   letter-spacing: 2px;
   padding: 20px;
   display: inline-block;
-  /* -webkit-transition-duration: 0.25s;
-  transition-duration: 0.25s; */
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
   border-radius: 6px;
   width: 100%;
   box-sizing: border-box;

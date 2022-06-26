@@ -19,8 +19,9 @@ index.isOpen = false;
 
 // Menu button function
 index.showHideMenu = function() {
-  index.$menu.toggleClass('sideMenuShow');
+  index.$menu.toggleClass('sideMenuHide sideMenuShow');
   index.isOpen = !index.isOpen;
+//   console.log("1" + index.isOpen);
 }
 
 // Mobile class changes on initial load
@@ -44,19 +45,19 @@ index.eventListeners = function() {
 //   });
 
   // Nav menu click events for scroll function
-  $('a[href*=\\#]').on('click', function () {
-    index.scroll(this.hash);
-  });
+//   $('a[href*=\\#]').on('click', function () {
+//     index.scroll(this.hash);
+//   });
 
   // Menu button click event
   index.$menuButton.on('click', function () {
     // index.$menu.removeClass('sideMenuHide').addClass('sideMenuShow');
+    // index.showHideMenu();
     index.showHideMenu();
-    // index.showHideMenu;
   } );
 
   // Hide menu when clicking a link
-  index.$navItem.on('click', function() {
+  index.$navItem.on('click', function() {    
     if (index.isOpen) {// Hide menu when clicking a link
       index.showHideMenu();
     }
