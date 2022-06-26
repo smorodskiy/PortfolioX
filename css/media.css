@@ -20,11 +20,26 @@
 
 /* md <= Large (lg) */
 @media (max-width: 992px) {
-  .navItem {
-    font-size: 0.75rem;
-    padding: 10px;
-    letter-spacing: 1px;
+
+  .logo {
+    height: 150px;
   }
+
+  nav {
+    position: fixed;
+    flex-direction: column;
+    width: 200px;
+    height: 100%;
+    z-index: 10;
+    left: -200px;
+  }
+
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   .menuButton {
     display: block;
   }
@@ -34,9 +49,9 @@
     height: auto;
   }
   .navBar li {
-    /* padding: 10px; */
-    width: 101px;
-    margin: 0px 5px 0 5px;
+    padding: 10px;
+    /* width: 101px;
+    margin: 0px 5px 0 5px; */
   }
 
   .hero .heroDescription {
